@@ -30,7 +30,7 @@ class Player(cocos.sprite.Sprite):
         self.lives = 3
         self.jump_range = 100
         self.speed = 0
-        self.max_speed = 250
+        self.max_speed = 100
         self.acceleration = 25
         self.able_to_move = True
         self.image_load()
@@ -50,11 +50,12 @@ class Player(cocos.sprite.Sprite):
             self.speed += self.acceleration
         return self.speed
 
-    def move(self):
+    def move(self, direction):
         self.image = self.running
-
+        direction = direction
+        self.x += 1
+        
     def jump(self):
-        self.do(actions.JumpBy((100, 0), 30, 1, duration=0.4))
         self.image = self.jumping
 
     def stand(self):

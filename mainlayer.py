@@ -21,23 +21,21 @@ class MainLayer(cocos.layer.Layer):
         self.schedule(self.update)
 
     def update(self, dt):
-        if self.player.able_to_move:
-            self.movement()
+        self.movement()
 
 
     def movement(self):        
+        versor_x = int(self.keys[key.RIGHT]) - int(self.keys[key.LEFT])
+        versor_y = int(self.keys[key.UP]) - int(self.keys[key.DOWN])
 
         if self.keys[key.SPACE]:
-            self.prejump_x, self.prejump_y = self.player.position
             self.player.jump()
-        elif (self.keys[key.RIGHT] is not self.keys[key.LEFT]) and (self.player.image is not self.player.running):
-            self.player.move()
+        elif versor_x != 0 or versor_y != 0:
+            self.player.x += versor_x * 3
+            self.player.y += versor_y * 3
+       
         else:
             self.player.stand()
-        
-        if self.keys[key.ENTER]:
-            self.player.stop()
-            self.player.do(actions.JumpBy((0, self.prejump_y - self.player.y), 0, 1, duration=0.15))
         
 
     def place_sprites(self):
