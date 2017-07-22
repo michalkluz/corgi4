@@ -6,7 +6,6 @@ TODO LIST:
 - Music Layer
 - Sound Layer
 - New Assets
-- Movement
 - Collision
 - Proper z-ordering on trees (two player sprites with different ordering at the same time)
 - new level

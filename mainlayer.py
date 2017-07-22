@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 import cocos.layer
 import cocos.collision_model as cm
 from cocos.director import director
@@ -21,19 +19,17 @@ class MainLayer(cocos.layer.Layer):
         self.schedule(self.update)
 
     def update(self, dt):
-        self.movement()
-
+        if self.player.are_actions_running() is False:
+            self.movement()
 
     def movement(self):        
         versor_x = int(self.keys[key.RIGHT]) - int(self.keys[key.LEFT])
         versor_y = int(self.keys[key.UP]) - int(self.keys[key.DOWN])
 
         if self.keys[key.SPACE]:
-            self.player.jump()
+            self.player.jump(versor_x, versor_y)
         elif versor_x != 0 or versor_y != 0:
-            self.player.x += versor_x * 3
-            self.player.y += versor_y * 3
-       
+            self.player.move(versor_x, versor_y)
         else:
             self.player.stand()
         
