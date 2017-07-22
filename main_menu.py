@@ -1,15 +1,20 @@
 import cocos.scene
 import cocos.menu
+import cocos.sprite
 from cocos.scenes.transitions import FadeTransition
 from cocos.director import director
 import pyglet.app
+from pyglet.image import load
 from scenario import new_game
 
+BLACK = (0, 0, 0, 255)
 
 class MainMenu(cocos.menu.Menu):
     def __init__(self):
         super(MainMenu, self).__init__(
             'The Amazing Adventures of the Courageous Corgi! Part 1')
+        self.font_item['color']= BLACK
+        self.font_title['color']= BLACK
 
         menu_items = list()
         menu_items.append(cocos.menu.MenuItem('Begin a new Adventure!', self.on_new_game))
@@ -26,6 +31,9 @@ def new_menu():
     Returns scene object for the corgi.py's director.run function
     """
     scene = cocos.scene.Scene()
+    background_image = load('assets/mainmenu.jpg')
+    background_sprite = cocos.sprite.Sprite(background_image, (director.window.width/2, director.window.height/2))
+    scene.add(background_sprite)
     scene.add(MainMenu())
     return scene
 

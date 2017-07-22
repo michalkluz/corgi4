@@ -28,11 +28,12 @@ class Player(cocos.sprite.Sprite):
         self.cshape = cm.AARectShape(position, self.width/6, self.height/12)
         self.update_cshape()
         self.lives = 3
-        self.jump_range = 100
+        self.jump_range = 140
         self.speed = 0
         self.max_speed = 3.5
         self.acceleration = 0.15
         self.image_load()
+        self.may_jump = True
 
     def image_load(self):
         """Loads the sprites used for player sprite: standing, jumping, running around.
