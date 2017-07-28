@@ -21,6 +21,7 @@ class MainLayer(cocos.layer.ScrollableLayer):
         self.schedule(self.update)
 
     def update(self, dt):
+        
         if self.player.are_actions_running() is False:
             self.movement()
         self.scroller.set_focus(self.player.x, self.player.y)
@@ -42,11 +43,18 @@ class MainLayer(cocos.layer.ScrollableLayer):
         
 
     def place_sprites(self):
-        # for consumable in self.tile_map['Consumable'].objects:
-        #     golden_bone = actors.Consumable(
-        #         consumable.position, 'assets/goldenbone1.png')
-        #     golden_bone.name = "Consumable"
-        #     self.add(golden_bone)
+        # for item in self.tile_map['ItemLayer'].objects:
+        #     if "Starting_Position" in item.properties:
+        #         self.player = actors.Player(item.position)
+        #         self.add(self.player)
+        #     if "Finish_Position" in item.properties:
+        #         self.finish_position = item.position
+        #     if "Consumable" in item.properties:
+        #         # golden_bone = actors.Consumable(item.position, 'assets/goldenbone1.png')
+        #         # self.add(golden_bone)
+        #         pass
+        #     if "Obstacle" in item.properties:
+        #         pass
 
         for special in self.tile_map['SpecialLayer'].objects:
             if special.name == "STARTINGPOSITION":

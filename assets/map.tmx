@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2017.06.20" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="128" tileheight="128" nextobjectid="1">
- <layer name="Warstwa Kafelków 1" width="40" height="30">
+<map version="1.0" tiledversion="2017.06.20" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="128" tileheight="128" nextobjectid="3">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="background" width="40" height="30">
   <data encoding="base64" compression="zlib">
-   eJztwTEBAAAAwqD1T20ND6AAAAAA4NcAEsAAAQ==
+   eJyVlsGS3CAMRMF4MyRbyf7/bT51nYpV9fa5yXoO1DCAUaslNRqttXGMeYztGP2cj3O+YYzzd4a9Dd8MzCf2acP3Df2vNc95V8c+8YzwPe8pDPym6wztkYsu+71deZmyQYzkhnZ4Np1J88TDaFf+jel/sZma21/Pbc/cm2PGnXhGsJvix723Y/x4cTxgm/jJQ/mS/En+bovvfx7j14vjHbzsAcvQGmPM3Hesu+z83f99jD8vjo/z/r19zXEOa0fiiPlXnBkf64GxN+/00Xm8A4vzZ1Ufs13zYwqf8fr/alRcC5d1xZxZ94yLOsB9x/suvjv6bu22PluTHMs6Q7vpG8aKHBV35HGVW8Zc/7/jwdjTu1I23/6NJ/O0cLFW0hvJe5kPd/BR/x7tqomP89xRs89j/vT7SJ6dQ+a968ydPKL+vZ/3eY14dnBZ/51fzssUpzv4rM+FxWuFo+JWXA7tGY+1d6XbzFdynrhKa6wD3re3HMOkedS4pMWr/EtY0lrZ2GVrb1/jT11Z9QV38y/hS2vUE2L0+5Z65KRp5cN3+Fa1kGJOPeG7QcysDfeHqbbv1C/7g4/zzrTG3E69IjUv1YLf8lX/t+m/ew1rPm1Rg3f8WjvcR5hrv7PJd/cq5MH9jPtN5z7rmrlnjnq7cjW07342vUOuQWIkj3zf7GPqTVJvaM2z78k343Psk96SL/cs1mn3PORxlVtTtrzPPfeyjmXCt+o9HFu/K+Yj6WvCku617qU+wd87D1e27R/rz2vWgqH70lu66gNT7s7FvnPMvlpD6GfSuZX2uS4dS9fGXJz3WeegfU09SaqPlN9JV/z28A7etXo/Eke9XfPhE5ybGcg=
   </data>
  </layer>
+ <layer name="top" width="40" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt0DEKADAIQ1EP4OD9T1scXESHQrEO/y2BTCEiAACgopf9NCs6bfppmjJs2OYspes2b1Ft/mXrR2HDRwAA4K0DyvgA4Q==
+  </data>
+ </layer>
+ <objectgroup name="SpecialLayer">
+  <object id="1" name="STARTINGPOSITION" x="3293.94" y="1481.82" width="109.091" height="96.9697"/>
+  <object id="2" name="FINISHPOSITION" x="1093.94" y="1512.12" width="196.97" height="139.394"/>
+ </objectgroup>
 </map>
