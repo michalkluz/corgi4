@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2017.06.20" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="128" tileheight="128" nextobjectid="3">
+<map version="1.0" tiledversion="2017.06.20" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="64" tileheight="64" nextobjectid="16">
  <tileset firstgid="1" source="tileset.tsx"/>
- <layer name="background" width="40" height="30">
+ <tileset firstgid="61" source="tileset2.tsx"/>
+ <layer name="Background" width="60" height="40">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
- <layer name="top" width="40" height="30">
-  <data encoding="base64" compression="zlib">
-   eJzt0DEKADAIQ1EP4OD9T1scXESHQrEO/y2BTCEiAACgopf9NCs6bfppmjJs2OYspes2b1Ft/mXrR2HDRwAA4K0DyvgA4Q==
-  </data>
- </layer>
- <objectgroup name="SpecialLayer">
-  <object id="1" name="STARTINGPOSITION" x="3293.94" y="1481.82" width="109.091" height="96.9697"/>
-  <object id="2" name="FINISHPOSITION" x="1093.94" y="1512.12" width="196.97" height="139.394"/>
+ <objectgroup name="ItemLayer">
+  <object id="7" name="Start" x="2540" y="1072" width="42" height="34"/>
+  <object id="10" name="Tree" x="2730" y="1075" width="38" height="30"/>
+  <object id="12" name="Tree" x="2349" y="1074" width="38" height="30"/>
+  <object id="13" name="Bone_Normal" x="2557" y="1302" width="38" height="30"/>
+  <object id="14" name="Bone_Normal" x="1918" y="1189" width="38" height="30"/>
+  <object id="15" name="Bone_Normal" x="2003" y="1362" width="38" height="30"/>
  </objectgroup>
 </map>

@@ -1,7 +1,6 @@
 import cocos.scene
 import cocos.tiles
 import cocos.layer
-from cocos.director import director
 import mainlayer
 import audio
 
@@ -9,16 +8,14 @@ def load_tilemap(path):
     return cocos.tiles.load(path)
 
 def new_game():
-    tile_map = load_tilemap('assets/map.tmx')
+    tile_map = load_tilemap('assets/map1.tmx')
     scenario = Scenario(tile_map)
     scroller = cocos.layer.ScrollingManager()
-    gamelayer = mainlayer.MainLayer(tile_map, scroller)
+    gamelayer = mainlayer.MainLayer(tile_map, scroller, scenario)
 
     scroller.add(scenario.background)
     musiclayer = audio.AudioLayer()
     scroller.add(gamelayer)
-
-    #scroller.add(scenario.top)
     return cocos.scene.Scene(scroller, musiclayer)
 
 
@@ -28,7 +25,5 @@ class Scenario:
         self.background = self.create_layers()
         
     def create_layers(self):
-        background = self.tile_map['background']
-       # top = self.tile_map['TopLayer']
-       # top.set_view(0, 0, top.px_width, top.px_height)
+        background = self.tile_map['Background']
         return background #top

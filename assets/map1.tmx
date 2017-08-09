@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2017.06.20" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="128" tileheight="128" nextobjectid="4">
+ <tileset firstgid="1" source="untitled.tsx"/>
+ <tileset firstgid="5" source="tileset.tsx"/>
+ <tileset firstgid="14" source="tileset3.tsx"/>
+ <layer name="Background" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt0csKgDAMRNGo+GjF/v/nOtJAVy5FSO6BC11mqBkAAHk0tarN29Xy60XfevYeqnjV+u6o3vZG3Zxx76lmNanL+u6omo0/rv6OjL2xZdsLAAAAAAAAAMjlBj/LAgA=
+  </data>
+ </layer>
+ <objectgroup name="ItemLayer">
+  <object id="1" name="Start" x="3068" y="1260.67" width="43.3333" height="21.3333"/>
+ </objectgroup>
+</map>

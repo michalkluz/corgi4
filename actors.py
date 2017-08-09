@@ -6,15 +6,23 @@ import pyglet.image as img
 
 
 class Consumable(cocos.sprite.Sprite):
-    """Sprites that the player may pick up, making them disappear
-    and increasing the player's jump range
+    """Sprites that the player may pick up, making them disappear.
     """
 
     def __init__(self, position, image):
         super().__init__(image)
         self.position = position
-        self.cshape = cm.CircleShape(position, self.width/2)
-        self.jump_boost = 20
+        self.cshape = cm.AARectShape(position, self.width/2, self.height/2)
+        self.name = "Consumable"
+
+
+class Tree(cocos.sprite.Sprite):
+    def __init__(self, position, image):
+        super().__init__(image)
+        self.position = position
+        self.cshape = cm.AARectShape(position, self.width/6, self.height/12)
+        self.cshape.center = eu.Vector2(self.x, self.y - self.height*0.30)
+        self.name = "Tree"
 
 
 class Player(cocos.sprite.Sprite):
@@ -28,7 +36,7 @@ class Player(cocos.sprite.Sprite):
         self.cshape = cm.AARectShape(position, self.width/6, self.height/12)
         self.update_cshape()
         self.lives = 3
-        self.jump_range = 140
+        self.jump_range = 120
         self.speed = 0
         self.max_speed = 3.5
         self.acceleration = 0.15
@@ -59,12 +67,17 @@ class Player(cocos.sprite.Sprite):
         if versor_x == -1 and self.scale_x != 1:
             self.scale_x = 1
         
-        self.x += versor_x * self.get_speed()
-        self.y += versor_y * self.get_speed()
+        # self.x += versor_x * self.get_speed()
+        # self.y += versor_y * self.get_speed()
+
+        dx = versor_x * self.get_speed()
+        dy = versor_y * self.get_speed()
+
+        self.position = (self.x + dx, self.y + dy)
         
     def jump(self, versor_x, versor_y):
         self.image = self.jumping
-        jump = cocos.actions.JumpBy((self.jump_range * versor_x,
+        jump = actions.JumpBy((self.jump_range * versor_x,
                                             self.jump_range * versor_y), height=30, jumps=1, duration=0.4)
         self.do(jump)
 
@@ -79,4 +92,3 @@ class Player(cocos.sprite.Sprite):
         the center of his current position.
         """
         self.cshape.center = eu.Vector2(self.x, self.y - self.height*0.30)
-
