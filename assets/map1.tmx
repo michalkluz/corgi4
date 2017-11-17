@@ -5,7 +5,7 @@
  <tileset firstgid="14" source="tileset3.tsx"/>
  <layer name="Background" width="60" height="40">
   <data encoding="base64" compression="zlib">
-   eJzt0csKgDAMRNGo+GjF/v/nOtJAVy5FSO6BC11mqBkAAHk0tarN29Xy60XfevYeqnjV+u6o3vZG3Zxx76lmNanL+u6omo0/rv6OjL2xZdsLAAAAAAAAAMjlBj/LAgA=
+   eJztltEKgzAMRetWV6dz//+5q9ALdyEVNgdr5T4c0LZIT5PUPEMITyGEEKdlzNwMqYF9HXVKleeYGTKPwiUzN7DnI0yZa4ldJJ9t/F7mkrM2Ufw55mNoOwfgBdh9KDHlMV4Xw/uZICdazgHri/yFZzRjvI7fZ/pWT77Y61J8Nq+VxlDLK72jrnvwhRdittLcRHvfu6uxrgdf7Ne6YtyrXa/We/JdHFebv1yrXq3D1zu3VvBytNZXsDvXsM3nlmPL942Xq9x77PVX8KzlSWt4sbPx887B+v7b45fnYf+1mOuhxzjizPcR99g95PGn8P+Je84zuiLGtRoXQgghhBBCCCGEEN/zAuFTfXY=
   </data>
  </layer>
  <objectgroup name="ItemLayer">

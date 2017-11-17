@@ -36,9 +36,9 @@ class Player(cocos.sprite.Sprite):
         self.cshape = cm.AARectShape(position, self.width/6, self.height/12)
         self.update_cshape()
         self.lives = 3
-        self.jump_range = 120
+        self.jump_range = 150
         self.speed = 0
-        self.max_speed = 3.5
+        self.max_speed = 4.5
         self.acceleration = 0.15
         self.image_load()
         self.may_jump = True
